@@ -31,8 +31,8 @@ export function collectCommands(): ClassDecorator {
 }
 
 export function registerExtensionCommands(context: ExtensionContext) {
-    commandsConstructor.forEach(C => {
-        context.subscriptions.push(new C());
+    commandsConstructor.forEach(c => {
+        context.subscriptions.push(new c());
     });
 }
 

@@ -17,7 +17,7 @@ export class MarkdownToPDF extends Command {
             } else {
                 const sourceFile = editor.document.fileName;
                 const targetFile = editor.document.fileName.replace('.md', '.pdf');
-                await mdToPDF('D:\\github\\markdown2pdf\\README.md', 'D:\\github\\markdown2pdf\\README.pdf');
+                mdToPDF(sourceFile, targetFile);
                 vscode.window.showInformationMessage(`PDF file is saved at ${targetFile}`);
             }
         }
