@@ -1,24 +1,19 @@
-import { Remarkable } from 'remarkable';
+import * as fs from 'fs';
+import { marked } from 'marked';
+const pdf = require('html-pdf');
 
 
-const mdToPDF = (sourcePath: string, targetPath: string) => {
-    // var md = new Remarkable();
-    // var fs = require('fs');
-    // var file = fs.readFileSync(sourcePath, "utf8");
-    // console.log(file);
-    // console.log(md.render(file));
-    test();
-};
+const mdToPDF = (sourcePath: string) => {
+    const htmlPath = sourcePath.replace('.md', '.html');
 
-const test = () => {
-    var fs = require('fs');
-    var pdf = require('html-pdf');
-    var html = fs.readFileSync('D:\\github\\markdown2pdf\\1.html', 'utf8');
-    var options = { format: 'Letter' };
+    const file = fs.readFileSync(sourcePath, "utf8");
+    const html = marked.parse(file);
+    const options = { format: 'Letter' };
+    const pdfPath = htmlPath.replace('.html', '.pdf');
 
-    pdf.create(html, options).toFile('D:\\github\\markdown2pdf\\1.pdf', function (err, res) {
-        if (err) {return console.log(err);}
-        console.log(res); // { filename: '/app/businesscard.pdf' }
+    pdf.create(html, options).toFile(pdfPath, function (err: any, res: any) {
+        if (err) { return console.log(err); }
+        console.log(res);
     });
 };
 

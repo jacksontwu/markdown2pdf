@@ -9,7 +9,6 @@ export class MarkdownToPDF extends Command {
     }
 
     async excute() {
-        // 选择文件
         const editor = vscode.window.activeTextEditor;
         if (editor !== null) {
             if (editor?.document.languageId !== 'markdown') {
@@ -17,7 +16,7 @@ export class MarkdownToPDF extends Command {
             } else {
                 const sourceFile = editor.document.fileName;
                 const targetFile = editor.document.fileName.replace('.md', '.pdf');
-                mdToPDF(sourceFile, targetFile);
+                mdToPDF(sourceFile);
                 vscode.window.showInformationMessage(`PDF file is saved at ${targetFile}`);
             }
         }

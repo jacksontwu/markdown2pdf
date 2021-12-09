@@ -34,8 +34,8 @@
 	"devDependencies": {
 		"@types/glob": "^7.1.4",
 		"@types/markdown-pdf": "^9.0.1",
+		"@types/marked": "^4.0.1",
 		"@types/node": "14.x",
-		"@types/remarkable": "^2.0.3",
 		"@types/vscode": "^1.62.0",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
@@ -48,11 +48,9 @@
 		"webpack-cli": "^4.8.0"
 	},
 	"dependencies": {
-		"extend": "^3.0.2",
-		"highlight.js": "^11.3.1",
 		"html-pdf": "^3.0.1",
 		"markdown-pdf": "^10.0.0",
-		"phantomjs-prebuilt": "^2.1.16",
-		"remarkable": "^2.0.1"
+		"marked": "^4.0.6",
+		"phantomjs-prebuilt": "^2.1.16"
 	}
 }
