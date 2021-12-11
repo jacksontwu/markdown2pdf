@@ -4,6 +4,7 @@
 	"description": "markdown to pdf",
 	"version": "0.0.1",
 	"author": "jacksontwu",
+	"publisher": "jacksontwu",
 	"repository": "https://github.com/jacksontwu/markdown2pdf.git",
 	"engines": {
 		"vscode": "^1.62.0"
