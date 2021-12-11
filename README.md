@@ -1,6 +1,4 @@
-# markdown2pdf README
+# markdown2pdf
 
-## install dependency
-```bash
-npm i
-```
+## Usage
+Open markdown file, and then type the command `Markdown2pdf：pdf`
